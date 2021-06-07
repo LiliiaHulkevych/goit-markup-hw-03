@@ -7,6 +7,11 @@
 /* вторичний колір фону #F5F4FA */
 /* колір фону героя і футера #2F303A */
 
+html {
+    box-sizing: border-box;
+}
+
+
 :root {
     --primary-text-color: #212121;
     --secondary-text-color: #757575;
@@ -30,7 +35,10 @@ body  {
 
 .list {
     list-style: none;
+    padding: 0;
+    margin: 0;
 }
+
 
 /* LOGO */
 
@@ -85,15 +93,23 @@ text-decoration: none;
 
 .hero {
     background-color: var(--hero-bg-color);
+    text-align: center;
+    padding-top: 200px;
+    padding-bottom: 200px;
 }
     
+h1, h2, h3, h4, h5, h6 {
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
 .hero-title {
+    margin-bottom: 36px;
+
     color: var(--primary-white-color);
 
     font-weight: 900;
     font-size: 44px;
     line-height: 1.36;
-    text-align: center;
     letter-spacing: 0.06em;
     text-transform: uppercase;
 }
@@ -112,7 +128,17 @@ text-decoration: none;
 
 /* section */
 
+.section {
+    padding-top: 94px;
+    padding-bottom: 94px;
+
+
+    background-color: yellowgreen;
+}
+
 .feature-list .title {
+    margin-bottom: 10px;
+
     font-size: inherit;
     font-weight: 700;
     line-height: 1.14;
@@ -120,18 +146,31 @@ text-decoration: none;
 }
 
 .feature-list .text {
+    margin-top: 0px;
+    margin-bottom: 0px;
+    
     color: var(--secondary-text-color);
     line-height: 1.71;
 }
 
 .section-title {
+    margin-bottom: 50px;
+
     font-weight: 700;
     font-size: 36px;
     line-height: 1.17;
     text-align: center;
 }
 
+.team{
+    background-color: var(--secondary-bg-color);
+}
+
+
 .team-list .name {
+    margin-top: 30px;
+    margin-bottom: 10px;
+
     font-weight: 500;
     font-size: 16px;
     line-height: 1.19;
@@ -139,6 +178,9 @@ text-decoration: none;
 }
 
 .team-list .text {
+    margin-top: 0px;
+    margin-bottom: 0px;
+
     color: var(--secondary-text-color);
 
     font-size: 16px;
@@ -149,24 +191,35 @@ text-decoration: none;
 /* footer */
 
 .footer {
+    padding-top: 60px;
+    padding-bottom: 60px;
+
     background-color: var(--hero-bg-color);
 }
 
 .adress {
+    margin-top: 20px;
+    margin-bottom: 9px;
+
     color: var(--primary-white-color);
 
     font-family: Roboto;
     font-style: normal; 
     line-height: 1.71;
 }
-.adress .contact-link {
+
+
+.contact > li+li {
+    margin-top: 9px;
+}
+.contact .contact-link {
     color: var(--secondary-white-color);
 
     text-decoration: none;
 }
 
-.adress .contact-link:hover,
-.adress .contact-link:focus {
+.contact .contact-link:hover,
+.contact .contact-link:focus {
     color: var(--accent);
 }
 
@@ -192,6 +245,9 @@ text-decoration: none;
 }
 
 .example-list .example-title {
+    margin-top: 20px;
+    margin-bottom: 4px;
+
     font-weight: 700;
     font-size: 18px;
     line-height: 2;
@@ -199,8 +255,20 @@ text-decoration: none;
 }
 
 .example-list .text {
+    margin-top: 0;
+    margin-bottom: 0;
+
     color: var(--secondary-text-color);
 
     font-size: 16px;
     line-height: 1.87;
+}
+
+
+.container {
+    width: 1200px;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
 }
