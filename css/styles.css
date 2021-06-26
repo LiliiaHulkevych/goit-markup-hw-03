@@ -6,6 +6,7 @@
 /* основний колір фону #FFFFFF */
 /* вторичний колір фону #F5F4FA */
 /* колір фону героя і футера #2F303A */
+/* колір рамки #EEEEEE */
 
 html {
     box-sizing: border-box;
@@ -22,6 +23,7 @@ html {
     --secondary-bg-color: #F5F4FA;
     --hero-bg-color: #2F303A;
     --black-color: #000000;
+    --border-color: #EEEEEE;
 }
 
 body  {
@@ -39,17 +41,46 @@ body  {
     margin: 0;
 }
 
+h1, h2, h3, h4, h5, h6 {
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+img{
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+.container {
+    width: 1200px;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* HEADER */
+.flex-header {
+    display: flex;
+    align-items: center;
+}
+
+.flex-nav {
+    display: flex;
+    align-items: center;
+}
 
 /* LOGO */
 
 .logo  {
-color: var(--accent);
+    color: var(--accent);
 
-font-family: Raleway, sans-serif;
-font-weight: 700;
-font-size: 26px;
-line-height: 1.19;
-text-decoration: none;
+    font-family: Raleway, sans-serif;
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 1.19;
+    text-decoration: none;
 }
 
 .logo-black {
@@ -61,7 +92,22 @@ text-decoration: none;
 
 /* nav */
 
+.site-nav {
+    display: flex;
+    margin-left: 93px;
+
+}
+
+
+.site-nav .item:not(:last-child) {
+    margin-right: 50px;
+}
+
 .site-nav .link {
+    display: block;
+    padding-top: 32px;
+    padding-bottom: 32px;
+
     color: inherit;
 
     text-decoration: none;
@@ -74,6 +120,15 @@ text-decoration: none;
 .site-nav .link:focus,
 .site-nav .link.active {
     color: var(--accent);
+}
+
+.contact-list {
+    display: flex;
+    margin-left: auto;
+}
+
+.contact-list .item:not(:last-child) {
+    margin-right: 50px;
 }
 
 .contact-list .link {
@@ -98,10 +153,7 @@ text-decoration: none;
     padding-bottom: 200px;
 }
     
-h1, h2, h3, h4, h5, h6 {
-    margin-top: 0px;
-    margin-bottom: 0px;
-}
+
 .hero-title {
     margin-bottom: 36px;
 
@@ -131,9 +183,22 @@ h1, h2, h3, h4, h5, h6 {
 .section {
     padding-top: 94px;
     padding-bottom: 94px;
+}
 
+.section.sect-feature {
+    padding-bottom: 0px;
+}
 
-    background-color: yellowgreen;
+.feature-list {
+    display: flex;
+}
+
+.feature-list .item {
+    flex-basis: 270px;
+}
+
+.feature-list .item:not(:last-child) {
+    margin-right: 30px;
 }
 
 .feature-list .title {
@@ -162,13 +227,34 @@ h1, h2, h3, h4, h5, h6 {
     text-align: center;
 }
 
+.action {
+    display: flex;
+}
+
+.action .item:not(:last-child) {
+    margin-right: 30px;
+}
+
 .team{
     background-color: var(--secondary-bg-color);
 }
 
+.team-list {
+    display: flex;
+}
+
+.team-list .item:not(:last-child) {
+    margin-right: 30px;
+}
+
+.team-list .member {
+    padding-top: 30px;
+    padding-bottom: 30px;
+
+    background-color: var(--primary-bg-color);
+}
 
 .team-list .name {
-    margin-top: 30px;
     margin-bottom: 10px;
 
     font-weight: 500;
@@ -223,7 +309,17 @@ h1, h2, h3, h4, h5, h6 {
     color: var(--accent);
 }
 
-/* portfolio */
+/* -------- PORTFOLIO --------- */
+
+.menu-list {
+    display: flex;
+    margin-bottom: 50px;
+    justify-content: center;
+}
+
+.menu-list .item:not(:last-child) {
+    margin-right: 8px;
+}
 
 .menu-list .button {
     background-color: var(--secondary-bg-color);
@@ -244,8 +340,29 @@ h1, h2, h3, h4, h5, h6 {
     color: var(--primary-white-color);
 }
 
+.example-list {
+    display: flex;
+    flex-wrap: wrap;
+    margin: -15px;
+}
+
+.example-list .item {
+    flex-basis: 370 px;
+    margin: 15px;
+}
+
+.example-list .works {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-right: 24px;
+    padding-left: 24px;
+
+    border: 1px solid var(--border-color);
+    border-top: transparent;
+}
+
 .example-list .example-title {
-    margin-top: 20px;
+    
     margin-bottom: 4px;
 
     font-weight: 700;
@@ -265,10 +382,3 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 
-.container {
-    width: 1200px;
-    padding-left: 15px;
-    padding-right: 15px;
-    margin-left: auto;
-    margin-right: auto;
-}
